@@ -2,8 +2,8 @@
 Aqui va la parte del menu
 */
 
-//$color-menu: rgba(95, 40, 113, .9);
-$color-menu: rgb(95, 40, 113);
+$color-menu: rgba(95, 40, 113, .9);
+//$color-menu: rgb(95, 40, 113);
 
 body {
    //background-color: red;
@@ -18,6 +18,7 @@ body {
    right: 0;
    left: 0;
    z-index: 10;
+   height: 63px;
 }
 .logo-menu {
    width: 100px;

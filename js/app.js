@@ -20,7 +20,7 @@ $(document).ready(function (){
       dots:true,
       items:1,
       center:true,
-      //autoplay:true,
+      autoplay:true,
       autoplayHoverPause:true,
       autoplayTimeout:10000,
       smartSpeed:500

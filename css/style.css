@@ -445,12 +445,13 @@ body {
 }
 
 .menu-bar {
-  background-color: #5f2871;
+  background-color: rgba(95, 40, 113, 0.9);
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 10;
+  height: 63px;
 }
 
 .logo-menu {
