@@ -27,4 +27,5 @@ $(document).ready(function (){
       smartSpeed:500
       //navText:['<i class="fa fa-caret-left fa-5x"></i>', '<i class="fa fa-caret-right fa-5x"></i>']
    });
+   $('.fancybox').fancybox();
 });
