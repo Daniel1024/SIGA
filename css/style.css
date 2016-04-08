@@ -440,10 +440,6 @@ textarea {
 /*
 Aqui va la parte del menu
 */
-body {
-  margin-top: 63px;
-}
-
 .menu-bar {
   background-color: rgba(95, 40, 113, 0.9);
   position: fixed;
@@ -451,7 +447,7 @@ body {
   right: 0;
   left: 0;
   z-index: 10;
-  height: 63px;
+  min-height: 63px;
 }
 
 .logo-menu {
@@ -504,7 +500,7 @@ body {
 .menu a {
   color: white;
   text-decoration: none;
-  line-height: 4;
+  line-height: 3.96;
   display: block;
   padding-left: 1em;
   transition: all 1s ease;
@@ -623,4 +619,14 @@ modificacion del carousel
   .owl-dots {
     display: none !important;
   }
+}
+
+.banner {
+  padding-top: 63px;
+}
+
+.seccion-verde {
+  background-color: #8AA236;
+  height: 1400px;
+  overflow: hidden;
 }

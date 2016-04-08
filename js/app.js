@@ -10,8 +10,9 @@ $(document).ready(function (){
       if ($toggle.css('display') == 'block') {
          $toggle.next().slideToggle();
       }
+      //console.log($($(this).attr('href')).offset().top);
       $('html, body').animate({
-         scrollTop: $($(this).attr('href')).offset().top
+         scrollTop: ($($(this).attr('href')).offset().top - 63)
       }, 1000);
    });
    $('.owl-carousel').owlCarousel({
