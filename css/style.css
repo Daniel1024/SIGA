@@ -440,8 +440,13 @@ textarea {
 /*
 Aqui va la parte del menu
 */
+.menu-header {
+  background-color: #5f2871;
+  height: 63px;
+}
+
 .menu-bar {
-  background-color: rgba(95, 40, 113, 0.9);
+  background-color: rgba(95, 40, 113, 0.8);
   position: fixed;
   top: 0;
   right: 0;
@@ -621,10 +626,9 @@ modificacion del carousel
   }
 }
 
-.banner {
-  padding-top: 63px;
-}
-
+/*.banner {
+   padding-top: 63px;
+}*/
 .seccion-verde {
   background-color: #8AA236;
   height: 1400px;

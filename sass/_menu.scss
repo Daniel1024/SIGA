@@ -2,9 +2,12 @@
 Aqui va la parte del menu
 */
 
-$color-menu: rgba(95, 40, 113, .9);
-//$color-menu: rgb(95, 40, 113);
-
+$color-menu: rgba(95, 40, 113, .8);
+$color-menu1: rgb(95, 40, 113);
+.menu-header {
+  background-color: $color-menu1;
+  height: 63px;
+}
 .menu-bar {
    background-color: $color-menu;
    position: fixed;
