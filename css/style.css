@@ -634,11 +634,26 @@ modificacion del carousel
   overflow: hidden;
 }
 
+.seccion-azul {
+  background-color: #29526D;
+  overflow: hidden;
+}
+
+.seccion-morada {
+  background-color: #5F2871;
+  height: 1400px;
+  overflow: hidden;
+}
+
+section > .container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 .seccion-info {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 100px 0;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
