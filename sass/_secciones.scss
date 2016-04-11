@@ -131,18 +131,23 @@ Seccion contacto
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
+   align-items: center;
    .encuesta-piloto-items {
       border: 2px solid white;
       text-align: center;
       margin-top: 20px;
       width: 20%;
       border-radius: 20px;
+      display: flex;
+      align-items: center;
       a {
          color: white;
+         display: block;
          text-decoration: none;
+         padding: 1.5em;
       }
       h3 {
-         margin: 1em;
+         margin: 0;
       }
    }
 }

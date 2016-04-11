@@ -781,6 +781,9 @@ Seccion contacto
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .encuesta-piloto .encuesta-piloto-items {
@@ -789,13 +792,21 @@ Seccion contacto
   margin-top: 20px;
   width: 20%;
   border-radius: 20px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .encuesta-piloto .encuesta-piloto-items a {
   color: white;
+  display: block;
   text-decoration: none;
+  padding: 1.5em;
 }
 
 .encuesta-piloto .encuesta-piloto-items h3 {
-  margin: 1em;
+  margin: 0;
 }
