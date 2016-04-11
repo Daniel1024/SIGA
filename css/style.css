@@ -641,8 +641,11 @@ modificacion del carousel
 
 .seccion-morada {
   background-color: #5F2871;
-  height: 1400px;
   overflow: hidden;
+}
+
+.relleno {
+  height: 1400px;
 }
 
 section > .container {
