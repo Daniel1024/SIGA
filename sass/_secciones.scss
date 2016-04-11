@@ -123,3 +123,26 @@ Seccion contacto
       }
    }
 }
+/*calidad-educativa*/
+.calidad-educativa {
+   color: white;
+}
+.encuesta-piloto {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   .encuesta-piloto-items {
+      border: 2px solid white;
+      text-align: center;
+      margin-top: 20px;
+      width: 20%;
+      border-radius: 20px;
+      a {
+         color: white;
+         text-decoration: none;
+      }
+      h3 {
+         margin: 1em;
+      }
+   }
+}
