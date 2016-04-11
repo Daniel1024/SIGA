@@ -67,3 +67,43 @@ section>.container {
       }
    }
 }
+/*
+Seccion contacto
+*/
+.contacto {
+   display: flex;
+   //flex-direction: column;
+   width: 100%;
+   .items-flex {
+      width: 30%;
+      margin-right: 5px;
+      &.mapa {
+         width: 70%;
+         position: relative;
+         margin-right: 0;
+         iframe {
+            position: absolute;
+         }
+      }
+      div {
+         text-align: left;
+         background-color: white;
+         margin-bottom: 5px;
+         //border-bottom: 2px solid transparent;
+         //border-left: 2px solid white;
+         overflow: hidden;
+         &:first-child {
+            text-align: center;
+         }
+         &:last-child {
+            margin-bottom: -4px;
+         //   background-color:white;
+         //   border-top: 2px solid white;
+         }
+         p {
+            padding: 0 20px;
+            font-weight: bold;
+         }
+      }
+   }
+}

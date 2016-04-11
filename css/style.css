@@ -699,3 +699,48 @@ section > .container {
   display: -ms-flexbox;
   display: flex;
 }
+
+/*
+Seccion contacto
+*/
+.contacto {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.contacto .items-flex {
+  width: 30%;
+  margin-right: 5px;
+}
+
+.contacto .items-flex.mapa {
+  width: 70%;
+  position: relative;
+  margin-right: 0;
+}
+
+.contacto .items-flex.mapa iframe {
+  position: absolute;
+}
+
+.contacto .items-flex div {
+  text-align: left;
+  background-color: white;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.contacto .items-flex div:first-child {
+  text-align: center;
+}
+
+.contacto .items-flex div:last-child {
+  margin-bottom: -4px;
+}
+
+.contacto .items-flex div p {
+  padding: 0 20px;
+  font-weight: bold;
+}
