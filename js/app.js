@@ -4,7 +4,7 @@ $(document).ready(function (){
       $(this).next().slideToggle();
    });
    var $menu = $('.menu').find('li');
-   $menu.on('click', 'a', function (ev){
+   $menu.on('click', 'a.scroll', function (ev){
       ev.preventDefault();
       var $toggle = $('#toggle-menu')
       if ($toggle.css('display') == 'block') {
