@@ -710,6 +710,23 @@ Seccion contacto
   width: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  .contacto {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .contacto .items-flex {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+  .contacto .items-flex.mapa {
+    min-height: 550px;
+    margin-top: 10px !important;
+    width: 89.5% !important;
+  }
+}
+
 .contacto .items-flex {
   width: 30%;
   margin-right: 5px;

@@ -74,6 +74,19 @@ Seccion contacto
    display: flex;
    //flex-direction: column;
    width: 100%;
+   @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+      //align-items: center;
+      .items-flex {
+         width: 90%!important;
+         margin: 0 auto!important;
+         &.mapa {
+            min-height: 550px;
+            margin-top: 10px!important;
+            width: 89.5%!important;
+         }
+      }
+   }
    .items-flex {
       width: 30%;
       margin-right: 5px;
