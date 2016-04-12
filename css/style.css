@@ -780,9 +780,14 @@ Seccion contacto
 
 .calidad-educativa p {
   text-align: justify;
+  font-size: 20px;
 }
 
 .calidad-educativa strong {
+  font-size: 25px;
+}
+
+.calidad-educativa li {
   font-size: 20px;
 }
 
