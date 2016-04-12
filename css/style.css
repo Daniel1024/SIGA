@@ -834,3 +834,72 @@ Seccion contacto
   margin: 0;
   padding: 1.5em;
 }
+
+/*Seccion de clientes*/
+.seccion-clientes h3 {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+.seccion-clientes .owl-dots {
+  display: none;
+}
+
+.seccion-clientes .owl-clientes {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.seccion-clientes .owl-clientes .item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 230px;
+}
+
+.seccion-clientes .owl-clientes .item div {
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+  margin: 0 1em;
+}
+
+.seccion-clientes .owl-clientes .item img {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.seccion-clientes .owl-clientes .item p {
+  color: white;
+  font-size: 20px;
+}
+
+.seccion-clientes .owl-clientes .item p:last-child {
+  font-weight: bold;
+}
+
+.seccion-clientes .owl-nav {
+  margin: 0;
+  position: absolute;
+  top: 32%;
+  width: 100%;
+}
+
+.seccion-clientes .owl-nav .owl-prev, .seccion-clientes .owl-nav .owl-next {
+  background-color: transparent;
+  float: left;
+  margin-left: -50px;
+}
+
+.seccion-clientes .owl-nav .owl-prev:hover, .seccion-clientes .owl-nav .owl-next:hover {
+  background-color: transparent;
+}
+
+.seccion-clientes .owl-nav .owl-next {
+  float: right;
+  margin-right: -50px;
+}

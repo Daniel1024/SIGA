@@ -170,3 +170,57 @@ Seccion contacto
       padding: 1.5em;
    }
 }
+/*Seccion de clientes*/
+.seccion-clientes {
+   h3 {
+      text-align: center;
+      font-size: 35px;
+      color: white;
+   }
+   .owl-dots {
+      display: none;
+   }
+   .owl-clientes {
+      width: 90%;
+      margin: 0 auto;
+      .item {
+         display: flex;
+         align-items: center;
+         //border: 1px solid white;
+         height: 230px;
+         div {
+            align-self: flex-start;
+            margin: 0 1em;
+         }
+         img {
+            border-radius: 50%;
+            width: 200px;
+         }
+         p {
+            color: white;
+            font-size: 20px;
+            &:last-child {
+               font-weight: bold;
+            }
+         }
+      }
+   }
+   .owl-nav {
+      margin: 0;
+      position: absolute;
+      top: 32%;
+      width: 100%;
+      .owl-prev, .owl-next {
+         background-color: transparent;
+         float: left;
+         margin-left: -50px;
+         &:hover {
+            background-color: transparent;
+         }
+      }
+      .owl-next {
+         float: right;
+         margin-right: -50px;
+      }
+   }
+}

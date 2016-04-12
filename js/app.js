@@ -15,7 +15,7 @@ $(document).ready(function (){
          scrollTop: ($($(this).attr('href')).offset().top - 63)
       }, 1000);
    });
-   $('.owl-carousel').owlCarousel({
+   $('.owl-banner').owlCarousel({
       loop:true,
       //nav:true,
       dots:true,
@@ -26,6 +26,28 @@ $(document).ready(function (){
       autoplayTimeout:10000,
       smartSpeed:500
       //navText:['<i class="fa fa-caret-left fa-5x"></i>', '<i class="fa fa-caret-right fa-5x"></i>']
+   });
+   $('.owl-clientes').owlCarousel({
+      loop:true,
+      nav:false,
+      //dots:true,
+      items:1,
+      //center:true,
+      autoplay:false,
+      margin:20,
+      autoplayHoverPause:true,
+      autoplayTimeout:10000,
+      smartSpeed:500,
+      navText:['<i class="fa fa-chevron-left fa-3x"></i>', '<i class="fa fa-chevron-right fa-3x"></i>'],
+      responsive : {
+         991 : {
+           items:2,
+           nav:true
+         },
+         767 : {
+            nav:true
+         }
+      }
    });
    $('.fancybox').fancybox();
 });
