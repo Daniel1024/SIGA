@@ -37,10 +37,12 @@ section>.container {
    //margin: 100px 0;
    align-items: flex-start;
    flex-wrap: wrap;
+   margin-top: 100px;
+   margin-bottom: 100px;
    a {
       //background-color: black;
       //display: flex;
-      width: 50%;
+      width: 25%;
       position: relative;
       transition: all .5s ease;
       .item-icon {
@@ -145,6 +147,13 @@ Seccion contacto
    flex-wrap: wrap;
    justify-content: space-around;
    align-items: stretch;
+   &:hover .encuesta-piloto-items {
+      transition: all .8s ease;
+      opacity: .5;
+      &:hover {
+         opacity: 1;
+      }
+   }
    .encuesta-piloto-items {
       border: 2px solid white;
       text-align: center;
@@ -153,14 +162,11 @@ Seccion contacto
       border-radius: 20px;
       display: flex;
       align-items: center;
-      a {
-         color: white;
-         display: block;
-         text-decoration: none;
-         padding: 1.5em;
-      }
-      h3 {
-         margin: 0;
-      }
+      text-decoration: none;
+   }
+   h3 {
+      color: white;
+      margin: 0;
+      padding: 1.5em;
    }
 }
