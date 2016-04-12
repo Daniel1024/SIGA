@@ -629,6 +629,12 @@ modificacion del carousel
 /*.banner {
    padding-top: 63px;
 }*/
+h2 {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
 .seccion-verde {
   background-color: #8AA236;
   overflow: hidden;
@@ -671,6 +677,12 @@ section > .container {
   width: 25%;
   position: relative;
   transition: all .5s ease;
+}
+
+@media screen and (max-width: 767px) {
+  .seccion-info a {
+    width: 50%;
+  }
 }
 
 .seccion-info a .item-icon {
@@ -773,11 +785,6 @@ Seccion contacto
   color: white;
 }
 
-.calidad-educativa > h3 {
-  text-align: center;
-  font-size: 30px;
-}
-
 .calidad-educativa p {
   text-align: justify;
   font-size: 20px;
@@ -825,13 +832,41 @@ Seccion contacto
   margin-top: 20px;
   width: 250px;
   border-radius: 20px;
+  text-decoration: none;
+  position: relative;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  text-decoration: none;
+  transition: all .8s ease;
+}
+
+.encuesta-piloto .encuesta-piloto-items i {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+  font-size: 2em;
+  width: 100%;
+  height: 100%;
+  display: none;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 5em;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+
+.encuesta-piloto .encuesta-piloto-items:hover i {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .encuesta-piloto h3 {
@@ -840,23 +875,44 @@ Seccion contacto
   padding: 1.5em;
 }
 
-/*Seccion de clientes*/
-.seccion-clientes h3 {
-  text-align: center;
-  font-size: 35px;
-  color: white;
+.seccion-clientes .owl-stage-outer, .seccion-testimonios .owl-stage-outer {
+  z-index: 9;
 }
 
-.seccion-clientes .owl-dots {
+.seccion-clientes .owl-dots, .seccion-testimonios .owl-dots {
   display: none;
 }
 
-.seccion-clientes .owl-clientes {
+.seccion-clientes .owl-nav, .seccion-testimonios .owl-nav {
+  margin: 0;
+  position: absolute;
+  top: 42%;
+  width: 100%;
+}
+
+.seccion-clientes .owl-nav .owl-prev, .seccion-clientes .owl-nav .owl-next, .seccion-testimonios .owl-nav .owl-prev, .seccion-testimonios .owl-nav .owl-next {
+  background-color: transparent;
+  float: left;
+  margin-left: -50px;
+  color: white;
+}
+
+.seccion-clientes .owl-nav .owl-prev:hover, .seccion-clientes .owl-nav .owl-next:hover, .seccion-testimonios .owl-nav .owl-prev:hover, .seccion-testimonios .owl-nav .owl-next:hover {
+  background-color: transparent;
+}
+
+.seccion-clientes .owl-nav .owl-next, .seccion-testimonios .owl-nav .owl-next {
+  float: right;
+  margin-right: -50px;
+}
+
+.seccion-clientes .owl-clientes, .seccion-testimonios .owl-clientes {
   width: 90%;
   margin: 0 auto;
 }
 
-.seccion-clientes .owl-clientes .item {
+/*Seccion de clientes*/
+.seccion-clientes .item {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -866,46 +922,65 @@ Seccion contacto
   height: 230px;
 }
 
-.seccion-clientes .owl-clientes .item div {
+.seccion-clientes .item div {
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start;
   margin: 0 1em;
 }
 
-.seccion-clientes .owl-clientes .item img {
+.seccion-clientes .item img {
   border-radius: 50%;
   width: 200px;
   height: 200px;
 }
 
-.seccion-clientes .owl-clientes .item p {
+.seccion-clientes .item p {
   color: white;
   font-size: 20px;
 }
 
-.seccion-clientes .owl-clientes .item p:last-child {
+.seccion-clientes .item p:last-child {
   font-weight: bold;
 }
 
-.seccion-clientes .owl-nav {
-  margin: 0;
+/*seccion testimonios*/
+.seccion-testimonios {
+  margin: 200px 0;
+}
+
+.seccion-testimonios h3 {
+  font-size: 25px;
+  color: white;
+  margin: 35px;
+}
+
+.seccion-testimonios div > p {
+  color: white;
+  margin: 1em;
+  font-weight: bold;
+}
+
+.seccion-testimonios div > p:last-child {
+  font-weight: normal;
+}
+
+.seccion-testimonios .content-video {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  position: relative;
+}
+
+.seccion-testimonios .content-video iframe, .seccion-testimonios .content-video object, .seccion-testimonios .content-video embed, .seccion-testimonios .content-video video {
+  width: 100%;
+  left: 0;
   position: absolute;
-  top: 32%;
+  top: 0;
   width: 100%;
 }
 
-.seccion-clientes .owl-nav .owl-prev, .seccion-clientes .owl-nav .owl-next {
-  background-color: transparent;
-  float: left;
-  margin-left: -50px;
-}
-
-.seccion-clientes .owl-nav .owl-prev:hover, .seccion-clientes .owl-nav .owl-next:hover {
-  background-color: transparent;
-}
-
-.seccion-clientes .owl-nav .owl-next {
-  float: right;
-  margin-right: -50px;
+.seccion-testimonios .owl-nav {
+  top: 36%;
 }

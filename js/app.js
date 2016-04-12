@@ -15,7 +15,7 @@ $(document).ready(function (){
          scrollTop: ($($(this).attr('href')).offset().top - 63)
       }, 1000);
    });
-   $('.owl-banner').owlCarousel({
+   $('.owl-carousel.owl-theme').owlCarousel({
       loop:true,
       //nav:true,
       dots:true,
@@ -33,21 +33,40 @@ $(document).ready(function (){
       //dots:true,
       items:1,
       //center:true,
-      autoplay:true,
+      autoplay:false,
       margin:20,
       autoplayHoverPause:true,
       autoplayTimeout:10000,
       smartSpeed:500,
       navText:['<i class="fa fa-chevron-left fa-3x"></i>', '<i class="fa fa-chevron-right fa-3x"></i>'],
       responsive : {
-         991 : {
+         991:{
            items:2,
            nav:true
          },
-         767 : {
+         767:{
             nav:true
          }
       }
    });
+   /*$('.owl-testimonios').owlCarousel({
+        items:2,
+        //merge:true,
+        loop:true,
+        //margin:20,
+        video:true,
+        lazyLoad:true
+        //center:true,
+        //videoWidth: 585, // Default false; Type: Boolean/Number
+        //videoHeight: 320 // Default false; Type: Boolean/Number
+        responsive:{
+            480:{
+                items:2
+            },
+            600:{
+                items:4
+            }
+        }
+    });*/
    $('.fancybox').fancybox();
 });

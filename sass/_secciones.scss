@@ -6,6 +6,12 @@ $color-verde: #8AA236;
 $color-azul: #29526D;
 $color-morado: #5F2871;
 
+h2 {
+   text-align: center;
+   font-size: 35px;
+   color: white;
+}
+
 .seccion-verde {
    background-color: $color-verde;
    //height: 1400px;
@@ -43,6 +49,9 @@ section>.container {
       //background-color: black;
       //display: flex;
       width: 25%;
+      @media screen and (max-width: 767px) {
+         width: 50%;
+      }
       position: relative;
       transition: all .5s ease;
       .item-icon {
@@ -128,10 +137,6 @@ Seccion contacto
 /*calidad-educativa*/
 .calidad-educativa {
    color: white;
-   &>h3 {
-      text-align: center;
-      font-size: 30px;
-   }
    p {
       text-align: justify;
       font-size: 20px;
@@ -164,9 +169,29 @@ Seccion contacto
       margin-top: 20px;
       width: 250px;
       border-radius: 20px;
+      text-decoration: none;
+      position: relative;
       display: flex;
       align-items: center;
-      text-decoration: none;
+      transition: all .8s ease;
+      i {
+         position: absolute;
+         color: white;
+         top: 0;
+         left: 0;
+         font-size: 2em;
+         width: 100%;
+         height: 100%;
+         display: none;
+         align-items: center;
+         justify-content: center;
+         font-size: 5em;
+         background-color: rgba(0,0,0,0.4);
+         border-radius: 20px;
+      }
+      &:hover i {
+         display: flex;
+      }
    }
    h3 {
       color: white;
@@ -174,51 +199,23 @@ Seccion contacto
       padding: 1.5em;
    }
 }
-/*Seccion de clientes*/
-.seccion-clientes {
-   h3 {
-      text-align: center;
-      font-size: 35px;
-      color: white;
+.seccion-clientes, .seccion-testimonios {
+   .owl-stage-outer {
+      z-index: 9;
    }
    .owl-dots {
       display: none;
    }
-   .owl-clientes {
-      width: 90%;
-      margin: 0 auto;
-      .item {
-         display: flex;
-         align-items: center;
-         //border: 1px solid white;
-         height: 230px;
-         div {
-            align-self: flex-start;
-            margin: 0 1em;
-         }
-         img {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-         }
-         p {
-            color: white;
-            font-size: 20px;
-            &:last-child {
-               font-weight: bold;
-            }
-         }
-      }
-   }
    .owl-nav {
       margin: 0;
       position: absolute;
-      top: 32%;
+      top: 42%;
       width: 100%;
       .owl-prev, .owl-next {
          background-color: transparent;
          float: left;
          margin-left: -50px;
+         color: white;
          &:hover {
             background-color: transparent;
          }
@@ -227,5 +224,68 @@ Seccion contacto
          float: right;
          margin-right: -50px;
       }
+   }
+   .owl-clientes {
+      width: 90%;
+      margin: 0 auto;
+   }
+}
+/*Seccion de clientes*/
+.seccion-clientes {
+   .item {
+      display: flex;
+      align-items: center;
+      //border: 1px solid white;
+      height: 230px;
+      div {
+         align-self: flex-start;
+         margin: 0 1em;
+      }
+      img {
+         border-radius: 50%;
+         width: 200px;
+         height: 200px;
+      }
+      p {
+         color: white;
+         font-size: 20px;
+         &:last-child {
+            font-weight: bold;
+         }
+      }
+   }
+}
+/*seccion testimonios*/
+.seccion-testimonios {
+   margin: 200px 0;
+   h3 {
+      font-size: 25px;
+      color: white;
+      margin: 35px;
+   }
+   div>p {
+      color: white;
+      margin: 1em;
+      font-weight: bold;
+      &:last-child {
+         font-weight: normal;
+      }
+   }
+   .content-video{
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      padding-top:30px;
+      position: relative;
+      iframe, object, embed, video {
+         width: 100%;
+         left: 0;
+         position: absolute;
+         top: 0;
+         width: 100%;
+      }
+   }
+   .owl-nav {
+      top: 36%;
    }
 }
