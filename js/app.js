@@ -33,7 +33,7 @@ $(document).ready(function (){
       //dots:true,
       items:1,
       //center:true,
-      autoplay:false,
+      autoplay:true,
       margin:20,
       autoplayHoverPause:true,
       autoplayTimeout:10000,
