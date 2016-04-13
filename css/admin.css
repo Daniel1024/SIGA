@@ -489,9 +489,9 @@ textarea {
 
 .checkbox__hack:checked ~ .sidebar {
   overflow: hidden;
-  width: 2%;
+  width: 0;
 }
 
 .checkbox__hack:checked ~ .main {
-  left: 2%;
+  left: 0;
 }
