@@ -41,9 +41,11 @@
             event.preventDefault();
             if ( ($( "#user" ).val() === "admin") && ($('#pass').val() === "admin") ) {
                $( "#msj" ).text( "Espere..." ).show();
-               parent.location.href = "inicio.html";
+               parent.location.href = "admin.html";
+            } else {
+               $( "#msj" ).text( "No es valido" ).show().fadeOut( 10000 );
             }
-            $( "#msj" ).text( "No es valido" ).show().fadeOut( 10000 );
+
          });
       });
    </script>
