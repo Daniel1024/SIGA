@@ -18,28 +18,34 @@
 </head>
 
 <body>
-
     <div id="login">
-
         <form action="javascript:void(0);" method="get">
-
             <fieldset class="clearfix">
-
                 <p><span class="fa fa-user" aria-hidden="true"></span>
-                  <input type="text" placeholder="Usuario" required>
+                  <input type="text" id="user" placeholder="Usuario" required>
                </p> <!-- JS because of IE support; better: placeholder="Username" -->
                 <p><span class="fa fa-lock" aria-hidden="true"></span>
-                  <input type="password"  placeholder="Clave" required>
+                  <input type="password" id="pass" placeholder="Clave" required>
                </p> <!-- JS because of IE support; better: placeholder="Password" -->
                 <p><input type="submit" value="Ingresar"></p>
-
             </fieldset>
-
         </form>
-
-        <p>Ha olvidado su contraseña? <a href="#">Recuperar</a><span class="fa fa-arrow-right" aria-hidden="true"></span></p>
-
+        <span id="msj"></span>
+        <p>Ha olvidado su contraseña? <a target="_parent" href="inicio.html">Recuperar</a><span class="fa fa-arrow-right" aria-hidden="true"></span></p>
     </div> <!-- end login -->
-
+    <!--Cargando el jQuery-->
+   <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+   <script>
+      $(document).ready(function (){
+         $( "form" ).submit(function( event ) {
+            event.preventDefault();
+            if ( ($( "#user" ).val() === "admin") && ($('#pass').val() === "admin") ) {
+               $( "#msj" ).text( "Espere..." ).show();
+               parent.location.href = "inicio.html";
+            }
+            $( "#msj" ).text( "No es valido" ).show().fadeOut( 10000 );
+         });
+      });
+   </script>
 </body>
 </html>

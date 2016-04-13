@@ -47,11 +47,23 @@ fieldset {
    border: none;
 }
 
+#msj {
+   display: none;
+   color: red;
+   font-size: 20px;
+   position: absolute;
+   bottom: 45px;
+   left: 0;
+   right: 0;
+   text-align: center;
+}
+
 /* ---------- LOGIN ---------- */
 
 #login {
    margin: 50px auto;
    width: 337px;
+   position: relative;
 }
 
 #login form span {
