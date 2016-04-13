@@ -650,13 +650,9 @@ h2 {
   overflow: hidden;
 }
 
-.relleno {
-  height: 1400px;
-}
-
 section > .container {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .seccion-info {
@@ -669,8 +665,8 @@ section > .container {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .seccion-info a {
@@ -696,6 +692,10 @@ section > .container {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.seccion-info a img {
+  width: 100%;
 }
 
 .seccion-info a i {
@@ -945,10 +945,6 @@ Seccion contacto
 }
 
 /*seccion testimonios*/
-.seccion-testimonios {
-  margin: 200px 0;
-}
-
 .seccion-testimonios h3 {
   font-size: 25px;
   color: white;
