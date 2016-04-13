@@ -700,7 +700,7 @@ section > .container {
 
 .seccion-info a i {
   color: rgba(95, 40, 113, 0.8);
-  font-size: 10em;
+  font-size: 5em;
 }
 
 .seccion-info:hover a {
@@ -944,6 +944,19 @@ Seccion contacto
   font-weight: bold;
 }
 
+@media screen and (max-width: 550px) {
+  .seccion-clientes .item {
+    display: block;
+    height: auto;
+  }
+  .seccion-clientes .item img {
+    margin: 0 auto;
+  }
+  .seccion-clientes .item div {
+    margin: 50px 2.5em 0 2.5em;
+  }
+}
+
 /*seccion testimonios*/
 .seccion-testimonios h3 {
   font-size: 25px;
@@ -975,6 +988,12 @@ Seccion contacto
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+@media screen and (max-width: 550px) {
+  .seccion-testimonios .content-video {
+    padding-bottom: 63.25%;
+  }
 }
 
 .seccion-testimonios .owl-nav {

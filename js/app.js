@@ -69,4 +69,19 @@ $(document).ready(function (){
         }
     });*/
    $('.fancybox').fancybox();
+   $('.fancyinicio').fancybox({
+      maxWidth : 600,
+      maxHeight   : 500,
+      fitToView   : false,
+      width    : '90%',
+      height      : '90%',
+      autoSize : false,
+      closeClick  : false,
+      openEffect  : 'elastic',
+      closeEffect : 'elastic',
+      padding:10,
+      iframe:{
+         scrolling:'yes'
+      }
+   });
 });

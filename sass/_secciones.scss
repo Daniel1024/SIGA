@@ -65,7 +65,7 @@ section>.container {
       i {
          //position: absolute;
          color: $color-menu;
-         font-size: 10em;
+         font-size: 5em;
          //transition: all .5s ease;
          //display: none;
       }
@@ -253,6 +253,16 @@ Seccion contacto
             font-weight: bold;
          }
       }
+      @media screen and (max-width: 550px) {
+         display: block;
+         height: auto;
+         img {
+            margin: 0 auto;
+         }
+         div {
+            margin: 50px 2.5em 0 2.5em;
+         }
+      }
    }
 }
 /*seccion testimonios*/
@@ -283,6 +293,9 @@ Seccion contacto
          position: absolute;
          top: 0;
          width: 100%;
+      }
+      @media screen and (max-width: 550px) {
+         padding-bottom: 63.25%;
       }
    }
    .owl-nav {

@@ -1,20 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-   <meta charset="UTF-8">
-   <title>Inicio de session</title>
-   <style type="text/css">
-      body {
-         background-color: #5F2871;
-         color: white;
-      }
-      h1 {
-         text-align: center;
-      }
-   </style>
+
+   <meta charset="utf-8">
+
+   <title>Login</title>
+   <!--Cargar fuentes de google-->
+   <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+   <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <!--Cargar iconos awesome-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+   <!--Cargar el ccs propio-->
+   <link rel="stylesheet" href="css/inicio.css">
 </head>
+
 <body>
-   <h1>Aqui se inicia session</h1>
+
+    <div id="login">
+
+        <form action="javascript:void(0);" method="get">
+
+            <fieldset class="clearfix">
+
+                <p><span class="fa fa-user" aria-hidden="true"></span>
+                  <input type="text" placeholder="Usuario" required>
+               </p> <!-- JS because of IE support; better: placeholder="Username" -->
+                <p><span class="fa fa-lock" aria-hidden="true"></span>
+                  <input type="password"  placeholder="Clave" required>
+               </p> <!-- JS because of IE support; better: placeholder="Password" -->
+                <p><input type="submit" value="Ingresar"></p>
+
+            </fieldset>
+
+        </form>
+
+        <p>Ha olvidado su contraseña? <a href="#">Recuperar</a><span class="fa fa-arrow-right" aria-hidden="true"></span></p>
+
+    </div> <!-- end login -->
 
 </body>
 </html>
