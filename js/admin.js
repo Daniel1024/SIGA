@@ -1,7 +1,17 @@
 $(document).ready(function (){
    var $URLactual = window.location.pathname;
    var $menu = $('.sidebar').find('ul');
-   $('.sidebar').find('a').each(function(index) {
+
+   /*codigo solo para github borrar en produccion*/
+   if (window.location.host.toString() == 'daniel1024.github.io') {
+      $menu.find('a').each(function() {
+         var $textGit = $(this).attr('href');
+         $textGit = '/SIGA' + $textGit;
+      });
+   }
+   /*codigo solo para github borrar en produccion*/
+
+   $menu.find('a').each(function() {
       //console.log( index + ": " + $(this).attr('href') );
       var $text = $(this).attr('href');
       if ($text[0] !== '/') {
