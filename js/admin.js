@@ -5,8 +5,10 @@ $(document).ready(function (){
    /*codigo solo para github borrar en produccion*/
    if (window.location.host.toString() == 'daniel1024.github.io') {
       $menu.find('a').each(function() {
-         //var $textGit = $(this).attr('href');
-         $(this).attr('href', '/SIGA' + $(this).attr('href'));
+         var $textGit = $(this).attr('href');
+         if ($textGit !== '#') {
+            $(this).attr('href', '/SIGA' + $textGit);
+         }
       });
    }
    /*codigo solo para github borrar en produccion*/
@@ -17,7 +19,7 @@ $(document).ready(function (){
       if ($text[0] !== '/') {
          $text = '/' + $text;
       }
-      console.log( $URLactual + ' ' + $text);
+      //console.log( $URLactual + ' ' + $text);
       if ($URLactual === $text) {
          $(this).parent().addClass('active');
          //console.log($(this).parent().parent().parent().hasClass('parent'));
