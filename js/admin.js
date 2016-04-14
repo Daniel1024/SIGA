@@ -11,7 +11,7 @@ $(document).ready(function (){
          $(this).parent().addClass('active');
          //console.log($(this).parent().parent().parent().hasClass('parent'));
          if (!$(this).parent().parent().parent().hasClass('parent')) {
-            $menu.find('li.parent>ul').slideToggle();
+            $menu.find('li.parent>ul').hide();
          }
          return false;
       }

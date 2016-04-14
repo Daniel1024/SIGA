@@ -572,6 +572,15 @@ textarea {
   }
 }
 
+.main * {
+  box-sizing: border-box;
+}
+
+.main h2 {
+  background-color: #FFF;
+  padding: 15px;
+}
+
 #window-resizer-tooltip {
   display: block !important;
   opacity: 1 !important;
