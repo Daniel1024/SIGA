@@ -24,7 +24,7 @@ $width-sidebar-min: 0;
    overflow: auto;
    z-index: 2;
    transition: all .5s ease;
-   &>ul {
+   ul {
       list-style: none;
       display: flex;
       flex-wrap: wrap;
@@ -49,6 +49,9 @@ $width-sidebar-min: 0;
             }
          }
       }
+   }
+   .parent > ul > li > a {
+      padding-left: 15px;
    }
    .active a {
       color: white;

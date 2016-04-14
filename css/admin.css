@@ -464,7 +464,7 @@ textarea {
   transition: all .5s ease;
 }
 
-.sidebar > ul {
+.sidebar ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -472,11 +472,11 @@ textarea {
   padding: 0;
 }
 
-.sidebar > ul > li {
+.sidebar ul > li {
   width: 100%;
 }
 
-.sidebar > ul > li > a {
+.sidebar ul > li > a {
   color: #8AA236;
   text-decoration: none;
   display: block;
@@ -485,13 +485,17 @@ textarea {
   white-space: nowrap;
 }
 
-.sidebar > ul > li > a > i {
+.sidebar ul > li > a > i {
   width: 50px;
   text-align: center;
 }
 
-.sidebar > ul > li > a:hover {
+.sidebar ul > li > a:hover {
   background-color: #e9ecf2;
+}
+
+.sidebar .parent > ul > li > a {
+  padding-left: 15px;
 }
 
 .sidebar .active a {
