@@ -17,6 +17,7 @@ $(document).ready(function (){
       if ($text[0] !== '/') {
          $text = '/' + $text;
       }
+      console.log( $URLactual + ' ' + $text);
       if ($URLactual === $text) {
          $(this).parent().addClass('active');
          //console.log($(this).parent().parent().parent().hasClass('parent'));
