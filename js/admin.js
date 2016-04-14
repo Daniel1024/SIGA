@@ -6,7 +6,7 @@ $(document).ready(function (){
    if (window.location.host.toString() == 'daniel1024.github.io') {
       $menu.find('a').each(function() {
          //var $textGit = $(this).attr('href');
-         $(this).attr('href') = '/SIGA' + $(this).attr('href');
+         $(this).attr('href', '/SIGA' + $(this).attr('href'));
       });
    }
    /*codigo solo para github borrar en produccion*/
