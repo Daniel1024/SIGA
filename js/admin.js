@@ -5,8 +5,8 @@ $(document).ready(function (){
    /*codigo solo para github borrar en produccion*/
    if (window.location.host.toString() == 'daniel1024.github.io') {
       $menu.find('a').each(function() {
-         var $textGit = $(this).attr('href');
-         $textGit = '/SIGA' + $textGit;
+         //var $textGit = $(this).attr('href');
+         $(this).attr('href') = '/SIGA' + $(this).attr('href');
       });
    }
    /*codigo solo para github borrar en produccion*/
