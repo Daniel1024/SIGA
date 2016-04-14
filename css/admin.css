@@ -438,7 +438,7 @@ textarea {
 }
 
 .navbar {
-  background-color: red;
+  background-color: #5F2871;
   height: 50px;
   overflow: hidden;
   position: fixed;
@@ -447,15 +447,56 @@ textarea {
   top: 0;
 }
 
+.navbar img {
+  width: 90px;
+  margin-top: 7px;
+}
+
 .sidebar {
-  background-color: black;
-  width: 20%;
+  background-color: white;
+  width: 25%;
   position: fixed;
   top: 50px;
   left: 0;
   bottom: 0;
   overflow: auto;
+  z-index: 2;
   transition: all .5s ease;
+}
+
+.sidebar > ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar > ul > li {
+  width: 100%;
+}
+
+.sidebar > ul > li > a {
+  color: #8AA236;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.sidebar > ul > li > a > i {
+  width: 50px;
+  text-align: center;
+}
+
+.sidebar > ul > li > a:hover {
+  background-color: #e9ecf2;
+}
+
+.sidebar .active a {
+  color: white;
+  background-color: #8AA236 !important;
 }
 
 .checkbox-hack__label {
@@ -473,14 +514,24 @@ textarea {
 }
 
 .main {
-  background-color: peru;
+  background-color: #35698A;
   position: fixed;
-  left: 20%;
-  top: 50px;
+  left: 25%;
+  top: 0;
   bottom: 0;
   right: 0;
+  margin-top: 50px;
   overflow: auto;
   transition: all .5s ease;
+}
+
+@media screen and (min-width: 1300px) {
+  .sidebar {
+    width: 15%;
+  }
+  .main {
+    left: 15%;
+  }
 }
 
 .checkbox__hack {
@@ -494,4 +545,30 @@ textarea {
 
 .checkbox__hack:checked ~ .main {
   left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    right: 0;
+    width: auto;
+    bottom: initial;
+    height: 0;
+    overflow: hidden;
+    border-radius: 0 0 15px 15px;
+    margin: 0px 15px 0 15px;
+  }
+  .main {
+    transition: none;
+    left: 0;
+  }
+  .checkbox__hack:checked ~ .sidebar {
+    overflow: auto;
+    height: 60vh;
+    width: auto;
+  }
+}
+
+#window-resizer-tooltip {
+  display: block !important;
+  opacity: 1 !important;
 }

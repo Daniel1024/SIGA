@@ -1,3 +1,8 @@
 @import 'normalize';
 @import 'columnas';
 @import 'menu-admin';
+
+#window-resizer-tooltip {
+   display: block!important;
+   opacity: 1!important;
+}
