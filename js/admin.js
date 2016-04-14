@@ -6,7 +6,7 @@ $(document).ready(function (){
    if (window.location.host.toString() == 'daniel1024.github.io') {
       $menu.find('a').each(function() {
          var $textGit = $(this).attr('href');
-         console.log($textGit);
+         //console.log($textGit);
          if ($textGit !== '#') {
             $(this).attr('href', '/SIGA' + $textGit);
          }
