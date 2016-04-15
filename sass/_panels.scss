@@ -1,0 +1,125 @@
+/*_panels.scss*/
+
+
+.alert {
+   padding: 15px 55px;
+   margin-bottom: 20px;
+   border: 1px solid transparent;
+   border-radius: 4px;
+   //display: flex;
+   font-family: "FontAwesome";
+   font-size: 1.8em;
+   position: relative;
+   color: white;
+   span {
+      font-family: 'Lato';
+      font-size: .6em;
+      line-height: 1;
+      position: relative;
+      top: -3px;
+   }
+   &:before {
+      position: absolute;
+      left: 15px;
+      top: 29%;
+   }
+   a:after {
+      content: "\f00d";
+      position: absolute;
+      font-size: .6em;
+      color: white;
+      right: 15px;
+      top: 29%;
+      top: calc(50% - 9px);
+   }
+   &.primary {
+      color: #1b3548;
+      background-color: #e9ecf2;
+      &:before {
+         content: "\f0e5";
+         top: calc(50% - 16px);
+      }
+      a:after {
+         color: black;
+      }
+   }
+   &.success {
+      background-color: #8ad919;
+      &:before {
+         content: "\f00c";
+         top: calc(50% - 16px);
+      }
+   }
+   &.warning {
+      background-color: #ffb53e;
+      &:before {
+         content: "\f11d";
+         top: calc(50% - 16px);
+      }
+   }
+   &.danger {
+      background-color: #f9243f;
+      &:before {
+         content: "\f05c";
+         top: calc(50% - 16px);
+      }
+   }
+}
+
+.flex {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   &>div {
+      width: 33%;
+      @media screen and (max-width: 767px) {
+         width: 100%;
+      }
+   }
+}
+
+.panel {
+   margin-bottom: 20px;
+   background-color: #fff;
+   border: 1px solid transparent;
+   border-radius: 4px;
+   box-shadow: 0 1px 1px rgba(0,0,0,.05);
+   .panel-heading {
+      font-size: 18px;
+      font-weight: 300;
+      letter-spacing: 0.025em;
+      height: 66px;
+      line-height: 45px;
+      padding: 10px 15px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      color: #fff;
+   }
+   .panel-body{
+      padding: 15px;
+   }
+   &.panel-default {
+      border-color: #ddd;
+      &>.panel-heading {
+         background: #fff;
+         border-bottom: 1px solid #eee;
+         color: #5f6468;
+         border-color: #ddd;
+      }
+   }
+   &.panel-primary {
+      border-color: #428bca;
+      &>.panel-heading {
+         background-color: #428bca;
+         border-color: #428bca;
+      }
+   }
+   &.panel-success {
+      border-color: #3c763d;
+      &>.panel-heading {
+         background-color: #3c763d;
+         border-color: #3c763d;
+      }
+   }
+}

@@ -40,4 +40,10 @@ $(document).ready(function (){
       //console.log($(this))
    });
    /*Codigo para el dropdown del menu*/
+   /*Codigo para cerrar las alertas*/
+   $('.alert').on('click', 'a', function(arg) {
+      arg.preventDefault();
+      $(this).parent().fadeOut("slow");
+   })
+   /*Codigo para cerrar las alertas*/
 });

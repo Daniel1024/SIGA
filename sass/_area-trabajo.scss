@@ -1,0 +1,24 @@
+.main {
+   margin-right: auto;
+   margin-left: auto;
+   padding-left: 15px;
+   padding-right: 15px;
+   * {
+      box-sizing: border-box;
+   }
+   .titulo {
+      background-color: #FFF;
+      padding: 15px;
+      overflow: hidden;
+      margin: 15px 0;
+      h2 {
+         margin: 0;
+      }
+   }
+}
+.linea {
+   height: 20px;
+   //width: 100%;
+   //background-color:black;
+}
+
