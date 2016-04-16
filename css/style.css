@@ -1352,6 +1352,13 @@ section > .container {
   margin-bottom: 150px;
 }
 
+@media screen and (max-width: 767px) {
+  section > .container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
 .seccion-info {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1364,6 +1371,13 @@ section > .container {
           flex-wrap: wrap;
   margin-top: 150px;
   margin-bottom: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  .seccion-info {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
 }
 
 .seccion-info a {

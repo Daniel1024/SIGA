@@ -33,6 +33,10 @@ h2 {
 section>.container {
    margin-top: 150px;
    margin-bottom: 150px;
+   @media screen and (max-width: 767px) {
+      margin-top: 100px;
+      margin-bottom: 100px;
+   }
 }
 
 .seccion-info {
@@ -42,6 +46,10 @@ section>.container {
    flex-wrap: wrap;
    margin-top: 150px;
    margin-bottom: 150px;
+   @media screen and (max-width: 767px) {
+      margin-top: 100px;
+      margin-bottom: 100px;
+   }
    a {
       //background-color: black;
       //display: flex;
