@@ -1,4 +1,59 @@
 /*_reticula.scss*/
+
+$color-tabla: rgba(196, 227, 243, 0.5);
+$color-tabla-hover: rgb(196, 227, 243);
+
+table{
+   width: 100%;
+   background-color: #FFF;
+   border-spacing: 0;
+   //border-collapse: collapse;
+   border: 1px solid #dddddd;
+   border-radius: 4px;
+   th {
+      border: 1px solid #e6e7e8;
+      border-top: none;
+      border-right: none;
+      vertical-align: middle;
+      background-color: #f7f7f8;
+      height: 50px;
+      &:first-child {
+         border-left: none;
+      }
+   }
+   td {
+      border: 1px solid #e6e7e8;
+      border-top: none;
+      border-right: none;
+      vertical-align: middle;
+      height: 50px;
+      text-align: center;
+      &:first-child {
+         border-left: none;
+      }
+   }
+   &.style tbody tr:nth-child(2n+1) {
+      background-color: $color-tabla;
+      &:hover {
+         background-color: $color-tabla-hover;
+      }
+   }
+   tbody tr {
+      &:hover {
+         background-color: #F5F5F5;
+      }
+      &:last-child td {
+         border-bottom: none;
+      }
+   }
+}
+
+
+$columnas: 12;
+$gutter-width: 1%;
+$container: 98%;
+/*
+
 .muestra {
    border: 2px solid red;
    padding: 10px;
@@ -9,10 +64,6 @@
       border-right : 2px solid red;
    }
 }
-
-$columnas: 12;
-$gutter-width: 1%;
-$container: 98%;
 
 .container-2 {
    margin-right: auto;
@@ -46,7 +97,7 @@ $container: 98%;
    flex: 0 0 auto;
    padding: 0 $gutter-width;
 }
-
+*/
 @mixin columns {
    @for $i from 1 through $columnas {
       .col-#{$i} {
@@ -56,4 +107,4 @@ $container: 98%;
    }
 }
 
-@include columns;
+//@include columns;

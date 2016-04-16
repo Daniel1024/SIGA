@@ -1,4 +1,8 @@
-.navbar {
+$width-sidebar: 25%;
+$width-sidebar-max: 15%;
+$width-sidebar-min: 0;
+
+.head-bar {
    background-color: #5F2871;
    height: 50px;
    overflow: hidden;
@@ -13,9 +17,20 @@
       margin-top: 7px;
    }
 }
-$width-sidebar: 25%;
-$width-sidebar-max: 15%;
-$width-sidebar-min: 0;
+#btn-menu {
+   border: none;
+   background-color: transparent;
+   float: right;
+   //position: absolute;
+   //top: calc(50% - 48px + 50px);
+   margin-top: 10px;
+   //right: 10px;
+   //z-index: 2;
+   //cursor: pointer;
+   //transition: all .5s ease;
+   font-size: 1.8em;
+   color: white;
+}
 .sidebar {
    background-color: white;
    width: $width-sidebar;
@@ -60,19 +75,6 @@ $width-sidebar-min: 0;
       background-color: #8AA236!important;
    }
 }
-.checkbox-hack__label {
-   position: fixed;
-   //top: calc(50% - 48px + 50px);
-   top: 10px;
-   right: 10px;
-   z-index: 2;
-   cursor: pointer;
-   transition: all .5s ease;
-   .fa {
-      font-size: 2em;
-      color: white;
-   }
-}
 .main {
    background-color: #35698A;
    position: fixed;
@@ -84,25 +86,21 @@ $width-sidebar-min: 0;
    overflow: auto;
    transition: all .5s ease;
 }
+@media screen and (min-width: 768px) {
+   .sidebar-hide {
+      overflow: hidden!important;
+      width: $width-sidebar-min!important;
+   }
+   .main-full {
+      left: $width-sidebar-min!important;
+   }
+}
 @media screen and (min-width: 1300px) {
    .sidebar {
       width: $width-sidebar-max;
    }
    .main {
       left: $width-sidebar-max;
-   }
-}
-.checkbox__hack {
-   display: none;
-   &:checked  {
-      & ~ .sidebar {
-         overflow: hidden;
-         width: $width-sidebar-min;
-         //background-color: black;
-      }
-      & ~ .main {
-         left: $width-sidebar-min;
-      }
    }
 }
 @media screen and (max-width: 767px) {
@@ -119,11 +117,9 @@ $width-sidebar-min: 0;
       transition: none;
       left: 0;
    }
-   .checkbox__hack:checked {
-      & ~ .sidebar {
-         overflow: auto;
-         height: 60vh;
-         width: auto;
-      }
+   .sidebar-hide {
+      overflow: auto;
+      height: 60vh;
+      width: auto;
    }
 }

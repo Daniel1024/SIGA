@@ -68,10 +68,10 @@
 
 .flex {
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    flex-wrap: wrap;
    &>div {
-      width: 33%;
+      width: 32%;
       @media screen and (max-width: 767px) {
          width: 100%;
       }
@@ -120,6 +120,30 @@
       &>.panel-heading {
          background-color: #3c763d;
          border-color: #3c763d;
+      }
+   }
+   &.panel-info {
+      border-color: #bce8f1;
+      &>.panel-heading {
+         background-color: #bce8f1;
+         color: #31708f;
+         border-color: #bce8f1;
+      }
+   }
+   &.panel-warning {
+      border-color: #faebcc;
+      &>.panel-heading {
+         background-color: #fcf8e3;
+         color: #8a6d3b;
+         border-color: #faebcc;
+      }
+   }
+   &.panel-danger {
+      border-color: #ebccd1;
+      &>.panel-heading {
+         background-color: #f2dede;
+         color: #a94442;
+         border-color: #ebccd1;
       }
    }
 }
