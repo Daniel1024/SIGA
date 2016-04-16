@@ -1189,6 +1189,14 @@ Aqui va la parte del menu
   display: none;
 }
 
+@media screen and (max-width: 767px) {
+  .menu {
+    overflow: auto;
+    z-index: 5;
+    max-height: 80vh;
+  }
+}
+
 .menu li {
   -webkit-flex: auto;
       -ms-flex: auto;

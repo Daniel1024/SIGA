@@ -43,39 +43,44 @@ $color-menu1: rgb(95, 40, 113);
    }
 }
 .menu {
-   padding-left: 0;
-   margin-top: 0;
-   margin-bottom: 0;
-   list-style: none;
-   display: none;
-   //z-index: 10;
-   li {
-      flex: auto;
-      //border-right: 1px solid red;
-      &:first-child a {
-         line-height: 1;
-      }
-   }
-   a {
-      color: white;
-      text-decoration: none;
-      line-height: 3.96;
-      display: block;
-      padding-left: 1em;
-      transition: all 1s ease;
-      &:hover {
-         background: rgba(#000,.5);
-      }
-   }
-   @media screen and (min-width: 768px) {
-      display: flex!important;
-      li {
-         text-align: center;
-      }
-      a {
-         padding-left: 0;
-      }
-   }
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: none;
+  //z-index: 10;
+  @media screen and (max-width: 767px) {
+    overflow: auto;
+    z-index: 5;
+    max-height: 80vh;
+  }
+  li {
+    flex: auto;
+    //border-right: 1px solid red;
+    &:first-child a {
+       line-height: 1;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    line-height: 3.96;
+    display: block;
+    padding-left: 1em;
+    transition: all 1s ease;
+    &:hover {
+       background: rgba(#000,.5);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex!important;
+    li {
+       text-align: center;
+    }
+    a {
+       padding-left: 0;
+    }
+  }
 }
 /*Theme original Carousel
 */
