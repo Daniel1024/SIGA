@@ -553,7 +553,7 @@ textarea {
   margin: 15px 0;
 }
 
-.main .titulo h2 {
+.main .titulo h2, .main .titulo h1 {
   margin: 0;
 }
 

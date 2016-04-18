@@ -1,0 +1,41 @@
+doctype html
+html(lang="es")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+      link(rel="shortcut icon", type="image/png", href="favicon.ico")
+      //Cargar fuentes de google
+      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic")
+      //Cargar iconos awesome
+      link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+      //Cargar el ccs de fancyBox
+      link(rel="stylesheet", href="fancyBox/jquery.fancybox.css")
+      //Cargar el ccs propio
+      link(rel="stylesheet", href="css/admin.css")
+      title Administrador
+   body
+      //head-bar
+      header.head-bar
+         img(src="img/logo-4.png", alt="logo")
+         button#btn-menu.fa.fa-bars
+      //head-bar
+      //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+      //sidebar
+      nav.sidebar
+         include menu-admin
+      //sidebar
+      //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+      //main
+      section.main
+         .titulo: h1
+            block title
+               |Dashboard
+         block main
+      //main
+      //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+      //Cargando jQuery
+      script(src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous")
+      //Cargando el fancyBox
+      script(src="fancyBox/jquery.fancybox.pack.js")
+      //Cargando el js propio
+      script(src="js/admin.js")
