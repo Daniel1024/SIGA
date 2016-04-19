@@ -48,63 +48,22 @@ table{
    }
 }
 
-
-$columnas: 12;
-$gutter-width: 1%;
-$container: 98%;
-/*
-
-.muestra {
-   border: 2px solid red;
-   padding: 10px;
-   height: 50px;
-   border-right: none;
-   border-bottom: none;
-   &:last-child {
-      border-right : 2px solid red;
-   }
+.dataTables_length, .dataTables_filter {
+   display: inline-block;
+   width: 50%;
+   margin: 0 0 10px 0;
+   padding: 0 10px;
 }
-
-.container-2 {
-   margin-right: auto;
-   margin-left: auto;
-   padding: 0 2%;
-   max-width: $container;
+.dataTables_filter {
+   text-align: right;
 }
-
-.row {
-   display: flex;
-   flex: 0 1 auto;
-   flex-direction: row;
-   flex-wrap: wrap;
-   &:last-child .muestra {
-      border-bottom: 2px solid red;
-   }
+.dataTables_info {
+   width: 35%;
+   display: inline-block;
 }
-
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
-   flex: 0 0 auto;
-   padding: 0 $gutter-width;
+.dataTables_paginate {
+   display: inline;
 }
-*/
-@mixin columns {
-   @for $i from 1 through $columnas {
-      .col-#{$i} {
-         max-width: ($container / $columnas) * $i;
-         flex-basis: ($container / $columnas) * $i;
-      }
-   }
+.paginate_button {
+   cursor: pointer;
 }
-
-//@include columns;
