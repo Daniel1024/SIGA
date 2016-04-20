@@ -16,6 +16,11 @@ $color-menu1: rgb(95, 40, 113);
    left: 0;
    z-index: 10;
    min-height: 63px;
+   @media (min-width: 768px) and (max-width: 991px){
+      .container {
+        width: initial;
+      }
+    }
 }
 .logo-menu {
    width: 100px;
@@ -34,12 +39,22 @@ $color-menu1: rgb(95, 40, 113);
       right: 30px;
    }
 }
+/*@media screen and (max-width: 991px) {
+  .menu li:nth-child(2) {
+      display: none;
+   }
+}*/
 @media screen and (max-width: 767px) {
    #toggle-menu {
       display: block;
    }
-   .menu li:first-child {
-      display: none;
+   .menu li {
+      &:first-child {
+        display: none;
+      }
+      /*&:nth-child(2) {
+        display: block;
+     }*/
    }
 }
 .menu {
@@ -68,6 +83,7 @@ $color-menu1: rgb(95, 40, 113);
     display: block;
     padding-left: 1em;
     transition: all 1s ease;
+    white-space: nowrap;
     &:hover {
        background: rgba(#000,.5);
     }

@@ -163,6 +163,12 @@ Seccion contacto
 /*calidad-educativa*/
 .calidad-educativa {
    color: white;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   h2 {
+      width: 100%;
+   }
    p {
       text-align: justify;
       font-size: 20px;
@@ -175,6 +181,22 @@ Seccion contacto
    }
    ol>li{
       padding-left: 5px;
+   }
+   .calidad-educativa-items {
+      flex-basis: 40%;
+      border: 2px solid white;
+      border-radius: 20px;
+      padding: 0 20px 10px 20px;
+      margin-top: 20px;
+      @media screen and (max-width: 767px) {
+         flex-basis: 90%;
+      }
+      &.texto {
+         flex-basis: 90%;
+         ol {
+            list-style-type: lower-latin;
+         }
+      }
    }
 }
 .encuesta-piloto {
