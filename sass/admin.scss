@@ -1,11 +1,11 @@
 @import 'normalize';
-//@import 'columnas';
+@import 'columnas';
 @import 'menu-admin';
 @import 'area-trabajo';
 @import 'panels';
 @import 'reticula';
 
-#window-resizer-tooltip {
+/*#window-resizer-tooltip {
    display: block!important;
    opacity: 1!important;
-}
+}*/

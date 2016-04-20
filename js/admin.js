@@ -81,10 +81,10 @@ $(document).ready(function (){
                "sInfoThousands":  ",",
                "sLoadingRecords": "Cargando...",
                "oPaginate": {
-                  "sFirst":    "Primero",
-                  "sLast":     "Último",
-                  "sNext":     "Siguiente",
-                  "sPrevious": "Anterior"
+                  "sFirst":    "<i class='fa fa-angle-double-right' aria-hidden='true'></i>",
+                  "sLast":     "<i class='fa fa-angle-double-left' aria-hidden='true'></i>",
+                  "sNext":     "<i class='fa fa-angle-right' aria-hidden='true'></i>",
+                  "sPrevious": "<i class='fa fa-angle-left' aria-hidden='true'></i>"
                },
                "oAria": {
                   "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
