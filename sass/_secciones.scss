@@ -198,6 +198,23 @@ Seccion contacto
          }
       }
    }
+   .contenedor {
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      padding-bottom: 50%;
+      padding-top: 30px;
+      position: relative;
+      width: 93%;
+      margin-top: 20px;
+      iframe {
+         height: 100%;
+         left: 0;
+         position: absolute;
+         top: 0;
+         width: 100%;
+      }
+   }
 }
 .encuesta-piloto {
    display: flex;
