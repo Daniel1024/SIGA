@@ -1,0 +1,56 @@
+<-- Tabla Avanzada -->
+<table id="example"><-- Solo se debe agregar un id a la tabla y luego iniciar con jQuery
+   <thead>
+      <tr>
+         <th>Item ID</th>
+         <th>Item Name</th>
+         <th>Item Price</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>0</td>
+         <td>Item 0</td>
+         <td>$10</td>
+      </tr>
+   </tbody>
+</table>
+
+<--Iniciado con jQuery-->
+$('#example').DataTable();
+
+<-- Tabla Basica -->
+<table><-- Solo se debe declarar la tabla normal
+   <thead>
+      <tr>
+         <th>Item ID</th>
+         <th>Item Name</th>
+         <th>Item Price</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>0</td>
+         <td>Item 0</td>
+         <td>$10</td>
+      </tr>
+   </tbody>
+</table>
+
+<-- Tabla con Estilo -->
+<table class="style"><-- Solo se debe declarar la tabla normal y colocar la clase "style"
+   <thead>
+      <tr>
+         <th>Item ID</th>
+         <th>Item Name</th>
+         <th>Item Price</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>0</td>
+         <td>Item 0</td>
+         <td>$10</td>
+      </tr>
+   </tbody>
+</table>

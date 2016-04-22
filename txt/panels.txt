@@ -1,0 +1,57 @@
+<div class="alert primary"><-- Agregar clase "alert y primary"
+   <span>Texto aqui</span> <-- Texto a mostrar
+   <a href="#"></a>        <-- Link obligatorio para poder cerrar el alerta
+</div>
+
+<div class="alert success"><-- Agregar clase "alert y success"
+   <span>Texto aqui</span> <-- Texto a mostrar
+   <a href="#"></a>        <-- Link obligatorio para poder cerrar el alerta
+</div>
+
+<div class="alert warning"><-- Agregar clase "alert y warning"
+   <span>Texto aqui</span> <-- Texto a mostrar
+   <a href="#"></a>        <-- Link obligatorio para poder cerrar el alerta
+</div>
+
+<div class="alert danger"> <-- Agregar clase "alert y danger"
+   <span>Texto aqui</span> <-- Texto a mostrar
+   <a href="#"></a>        <-- Link obligatorio para poder cerrar el alerta
+</div>
+
+<-- Y los paneles -->
+
+<-- Panel Default -->
+<div class="panel panel-default">
+   <div class="panel-heading">Titulo</div>
+   <div class="panel-body">Texto aqui</div>
+</div>
+
+<-- Panel Primary -->
+<div class="panel panel-primary">
+   <div class="panel-heading">Titulo</div>
+   <div class="panel-body">Texto aqui</div>
+</div>
+
+<-- Panel Success -->
+<div class="panel panel-success">
+   <div class="panel-heading">Titulo</div>
+   <div class="panel-body">Texto aqui</div>
+</div>
+
+<-- Panel Info -->
+<div class="panel panel-info">
+   <div class="panel-heading">Titulo</div>
+   <div class="panel-body">Texto aqui</div>
+</div>
+
+<-- Panel Warning -->
+<div class="panel panel-warning">
+   <div class="panel-heading">Titulo</div>
+   <div class="panel-body">Texto aqui</div>
+</div>
+
+<-- Panel Danger -->
+<div class="panel panel-danger">
+   <div class="panel-heading">Titulo</div>
+   <div class="panel-body">Texto aqui</div>
+</div>
