@@ -1,0 +1,124 @@
+/*_reticula.scss*/
+
+$color-tabla: rgba(196, 227, 243, 0.5);
+$color-tabla-hover: rgb(196, 227, 243);
+
+table{
+   width: 100%;
+   background-color: #FFF;
+   border-spacing: 0;
+   //border-collapse: collapse;
+   border: 1px solid #dddddd;
+   border-radius: 4px;
+   th {
+      border: 1px solid #e6e7e8;
+      border-top: none;
+      border-right: none;
+      vertical-align: middle;
+      background-color: #f7f7f8;
+      height: 50px;
+      &:first-child {
+         border-left: none;
+      }
+   }
+   td {
+      border: 1px solid #e6e7e8;
+      border-top: none;
+      border-right: none;
+      vertical-align: middle;
+      height: 50px;
+      text-align: center;
+      &:first-child {
+         border-left: none;
+      }
+   }
+   &.style tbody tr:nth-child(even) {
+      background-color: $color-tabla;
+      &:hover {
+         background-color: $color-tabla-hover;
+      }
+   }
+   tbody tr {
+      &:hover {
+         background-color: #F5F5F5;
+      }
+      &:last-child td {
+         border-bottom: none;
+      }
+   }
+}
+
+.dataTables_length, .dataTables_filter {
+   display: inline-block;
+   width: 50%;
+   margin: 0 0 10px 0;
+   padding-left:10px;
+   @media (max-width: 597px) {
+      width: 100%;
+      text-align: center!important;
+   }
+}
+.dataTables_length {
+   select {
+      margin: 0 10px;
+   }
+}
+.dataTables_filter {
+   text-align: right;
+   input {
+      margin: 0 10px;
+   }
+}
+.dataTables_info, .dataTables_paginate {
+   text-align: center;
+   margin-top: 10px;
+   padding: 0 15px;
+}
+.dataTables_paginate {
+   //display: inline;
+}
+.paginate_button {
+   cursor: pointer;
+   margin: 0 1px;
+   border: 1px solid #e6e7e8;
+   //color: white;
+   display: inline-block;
+   padding: 8px;
+   border-radius: 4px;
+   &:hover {
+      background-color: #F5F5F5;
+   }
+   &.current {
+      cursor: default;
+      background-color: #F5F5F5;
+   }
+   &.disabled {
+      cursor: default;
+      background-color: #FFF;
+   }
+}
+.sorting {
+   cursor: pointer;
+   &:after {
+      font-family: FontAwesome;
+      content: "\f0dc";
+      margin-left: 4px;
+      color: lightgray;
+   }
+}
+.sorting_asc {
+   cursor: pointer;
+   &:after {
+      font-family: FontAwesome;
+      content: "\f0de";
+      margin-left: 4px;
+   }
+}
+.sorting_desc {
+   cursor: pointer;
+   &:after {
+      font-family: FontAwesome;
+      content: "\f0dd";
+      margin-left: 4px;
+   }
+}

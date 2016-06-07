@@ -1,0 +1,129 @@
+$width-sidebar: 25%;
+$width-sidebar-max: 20%;
+$width-sidebar-min: 0;
+
+.head-bar {
+   background-color: #5F2871;
+   height: 50px;
+   overflow: hidden;
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   padding-left: 15px;
+   padding-right: 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   img {
+      width: 90px;
+   }
+   h2 {
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-size: 24px;
+   }
+}
+#btn-menu {
+   border: none;
+   background-color: transparent;
+   font-size: 1.8em;
+   color: white;
+}
+.sidebar {
+   background-color: white;
+   width: $width-sidebar;
+   position: fixed;
+   top: 50px;
+   left: 0;
+   bottom: 0;
+   overflow: auto;
+   z-index: 2;
+   transition: all .5s ease;
+   ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      &>li {
+         width: 100%;
+         &>a {
+            color: #8AA236;
+            text-decoration: none;
+            //border: 1px solid #8AA236;
+            display: block;
+            font-size: 20px;
+            padding: 10px 0;
+            white-space: nowrap;
+            &>i {
+               width: 50px;
+               text-align: center;
+            }
+            &:hover {
+               background-color: #e9ecf2;
+            }
+         }
+      }
+   }
+   .parent > ul {
+      display: none;
+      > li > a {
+         padding-left: 15px;
+      }
+   }
+   .active>a {
+      color: white;
+      background-color: #8AA236!important;
+   }
+}
+.main {
+   background-color: rgb(216, 213, 219);
+   position: fixed;
+   left: $width-sidebar;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   margin-top: 50px;
+   padding: 0 15px;
+   overflow: auto;
+   transition: all .5s ease;
+}
+@media screen and (min-width: 768px) {
+   .sidebar-hide {
+      overflow: hidden!important;
+      width: $width-sidebar-min!important;
+   }
+   .main-full {
+      left: $width-sidebar-min!important;
+   }
+}
+@media screen and (min-width: 1400px) {
+   .sidebar {
+      width: $width-sidebar-max;
+   }
+   .main {
+      left: $width-sidebar-max;
+   }
+}
+@media screen and (max-width: 767px) {
+   .sidebar {
+      right: 0;
+      width: auto;
+      bottom: initial;
+      height: 0;
+      overflow: hidden;
+      border-radius: 0 0 15px 15px;
+      margin: 0px 15px 0 15px;
+   }
+   .main {
+      transition: none;
+      left: 0;
+   }
+   .sidebar-hide {
+      overflow: auto;
+      height: 60vh;
+      width: auto;
+   }
+}

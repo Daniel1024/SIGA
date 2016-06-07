@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: SIGA
+        psr4_prefix: SIGA
+        src_path: app

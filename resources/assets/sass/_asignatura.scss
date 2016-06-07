@@ -1,0 +1,33 @@
+$gris: #d8d5db;
+.asignatura {
+	display: flex;
+	text-align: center;
+	.quimestre {
+		flex-basis: 50%;
+		background-color: #FFF;
+		h2 {
+			border-bottom: 2px solid $gris;
+			margin: 0;
+			padding: 15px 0;
+		}
+		&:first-child>h2 {
+			border-right: 2px solid $gris;
+		}
+		.parcial {
+			display: flex;
+			.parcial-item {
+				flex-basis: (100% / 3);
+				border-bottom: 2px solid $gris;
+				border-right: 2px solid $gris;
+				.btn {
+					margin: 15px 0;
+					text-decoration: none;
+				}
+			}
+		}
+		&:last-child .parcial-item:last-child {
+			border-right: none;
+		}
+	}
+
+}
