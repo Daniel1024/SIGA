@@ -35,31 +35,7 @@
             </li>
         </ul>
         <!--Menu-->
-        <ul>
-            <li><a href="{{ url('home/menu') }}"><i class="fa fa-envelope"></i>MENÚ PRINCIPAL</a></li>
-            <li class="parent"><a href="{{ url('notificacion/menu') }}"><i class="fa fa-bell"></i>Menú de Notificaciones</a>
-                <ul>
-                    <li><a href="{{ url('notificacion/comunicado') }}"><i class="fa fa-chevron-circle-right"></i>Comunicados</a></li>
-                    <li><a href="{{ url('notificacion/cartelera') }}"><i class="fa fa-chevron-circle-right"></i>Cartelera</a></li>
-                    <li><a href="{{ url('notificacion/calendario') }}"><i class="fa fa-chevron-circle-right"></i>Calendario</a></li>
-                </ul>
-            </li>
-            <li class="parent"><a href="{{ url('usuario/menu') }}"><i class="fa fa-user"></i>Menú de Usuario</a>
-                <ul>
-                    <li><a href="{{ url('usuario/aula') }}"><i class="fa fa-chevron-circle-right"></i>Aulas Asignadas</a></li>
-                    <li><a href="{{ url('usuario/agenda') }}"><i class="fa fa-chevron-circle-right"></i>Agenda Escolar</a></li>
-                    <li><a href="{{ url('usuario/comportamiento') }}"><i class="fa fa-chevron-circle-right"></i>Comportamiento</a></li>
-                </ul>
-            </li>
-            <li class="parent"><a href="{{ url('docente/menu') }}"><i class="fa fa-briefcase"></i>Portafolio Docente</a>
-                <ul>
-                    <li><a href="{{ url('docente/registro') }}"><i class="fa fa-chevron-circle-right"></i>Registro</a></li>
-                    <li><a href="{{ url('docente/reporte') }}"><i class="fa fa-chevron-circle-right"></i>Reporte</a></li>
-                    <li><a href="{{ url('docente/estandares') }}"><i class="fa fa-chevron-circle-right"></i>Estandares</a></li>
-                </ul>
-            </li>
-            <li><a href="{{ url('logout') }}"><i class="fa fa-sign-out"></i>Cerrar Sessión</a></li>
-        </ul>
+        {!!$menu !!}
     </nav>
     <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
     <!--main-->

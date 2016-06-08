@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 use SIGA\Http\Requests;
+use SIGA\Menu;
+use SIGA\Submenu;
 
 class AuthController extends Controller
 {
@@ -16,6 +18,7 @@ class AuthController extends Controller
      */
     public function index()
     {
+        //dd(auth()->user());
         if (auth()->user()) {
             return redirect()->route(auth()->user()->role);
         }
@@ -31,6 +34,57 @@ class AuthController extends Controller
     public function create()
     {
         //
+    }
+
+    private function _armar_li($url,$icono,$nombre,$id=0)
+    {
+        if ($url==='menu') {
+            $ruta = route($url, $id);
+        } else {
+            $ruta = route($url);
+        }
+        return '<a href="'.
+        $ruta.
+        '"><i class="fa '.
+        $icono.
+        '"></i>'.
+        $nombre.
+        '</a>';
+    }
+
+    private function _armar_menu($role)
+    {
+
+        $menus = Menu::where('tipo_usuario', $role)
+            ->orderBy('orden', 'asc')
+            ->get();
+
+        $text = '<ul>';
+
+        foreach ($menus as $menu) {
+            $submenus = Submenu::where('menu_id',$menu->id)
+                ->orderBy('orden', 'asc')
+                ->get();
+            if ($submenus->count() == 0) {
+                $text .= '<li>';
+                $text .= $this->_armar_li($menu->url, $menu->icono, $menu->nombre);
+                $text .= '</li>';
+            } else {
+                $text .= '<li class="parent">';
+                $text .= $this->_armar_li($menu->url, $menu->icono, $menu->nombre, $menu->id);
+                $text .= '<ul>';
+                foreach ($submenus as $submenu) {
+                    $text .= '<li>';
+                    $text .= $this->_armar_li($submenu->url, $submenu->icono, $submenu->nombre);
+                    $text .= '</li>';
+                }
+                $text .= '</ul>';
+                $text .= '</li>';
+            }
+        }
+
+        $text .= '</ul>';
+        session(['menu' => $text]);
     }
 
     /**
@@ -56,8 +110,11 @@ class AuthController extends Controller
                 ->withInput()
                 ->withErrors('No encontramos al Usuario');
         }
+        $role = auth()->user()->role;
 
-        return redirect()->route(auth()->user()->role);
+        $this->_armar_menu($role);
+
+        return redirect()->route($role);
     }
 
     /**

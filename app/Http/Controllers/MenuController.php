@@ -5,34 +5,35 @@ namespace SIGA\Http\Controllers;
 use Illuminate\Http\Request;
 
 use SIGA\Http\Requests;
-use SIGA\Http\Controllers\Controller;
+use SIGA\Menu;
+use SIGA\Submenu;
 
-class AdminController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function admin()
+    public function index($id)
     {
-        $items = array([
-            'url'   => '#',
-            'icono' =>'fa-university',
-            'nombre'=>'Instituciones'
-        ], [
-            'url'   => '#',
-            'icono' =>'fa-sitemap',
-            'nombre'=>'Agrupar Instituciones'
-        ], [
-            'url'   => '#',
-            'icono' =>'fa-sign-in',
-            'nombre'=>'Acceder Instituciones'
-        ]);
+        $submenus = Submenu::where('menu_id', $id)
+            ->orderBy('orden', 'asc')
+            ->get();
+        $items = array();
+        foreach ($submenus as $submenu) {
+            $item = array(
+                'url'   => route($submenu->url),
+                'icono' => $submenu->icono,
+                'nombre'=> $submenu->nombre
+            );
+            array_push($items, $item);
+        }
+        $nombre = Menu::findOrFail($id)->nombre;
         $data = [
             'menu'      => session('menu'),
-            'title'     =>'Administrador',
-            'titulo'    =>'Menú Prinicipal',
+            'title'     => $nombre,
+            'titulo'    => $nombre,
             'items'     => $items
         ];
         return view('menu.simple', $data);
@@ -45,7 +46,12 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'menu'      => session('menu'),
+            'title'     => 'Crear Menú',
+            'titulo'    => 'Crear Menú',
+        ];
+        return view('menu.crear', $data);
     }
 
     /**

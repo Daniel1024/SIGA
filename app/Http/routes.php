@@ -22,7 +22,7 @@ Route::post('login', 'AuthController@store')->name('login');    //Esta ruta Inic
 // Rutas para los usuarios registrados
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('logout', 'AuthController@destroy')->name('logout');     //Esta ruta pedira confirmacion para cerrar session
+    Route::get('logout', 'AuthController@destroy')->name('logout');     //Esta ruta pedirá confirmación para cerrar session
     Route::post('logout', 'AuthController@destroy')->name('logout');    //esta ruta cerrara la session del usuario
     Route::get('admin', 'AdminController@begin')->name('begin');
 
@@ -31,4 +31,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('docente', 'AdminController@docente')->name('docente');
     Route::get('alumno', 'AdminController@alumno')->name('alumno');
     Route::get('padres', 'AdminController@padres')->name('padres');
+
+    //Menu
+    Route::get('menu/crear', 'MenuController@create')->name('crear_menu');
+    Route::get('menu/editar', 'MenuController@create')->name('editar_menu');
+    Route::get('menu/eliminar', 'MenuController@create')->name('eliminar_menu');
+    Route::get('menu/{id}', 'MenuController@index')->name('menu')->where('id', '[0-9]+');
 });
