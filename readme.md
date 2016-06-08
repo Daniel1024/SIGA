@@ -1,18 +1,33 @@
-## Laravel PHP Framework
+# Laravel PHP Framework - SIGA
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Instruciones de instalación:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+### Instalaciones Previas en el PC Local
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+#IMPORTANTE: La version que se esta utilizando es la "5.1"
+
+1) Se debe instalar [Composer](https://getcomposer.org/).
+2) Se debe instalar [Nodejs](https://nodejs.org/en/).
+3) Opcional: SI quiren se pueden instalar Homestead la maquina virtual para laravel, [HOMESTEAD](https://laravel.com/docs/5.1/homestead)
+4) Descargar (clonar) el repositorio
+
+    $ git clone git@bitbucket.org:sigaproyecto/siga.git SIGA
+    $ git fetch && git checkout aguijarro
+    o
+    $ git fetch && git checkout morjuax
+
+5) Al tener el repositorio en local, abrir la carpeta con lianea de comando y ejecutar los siguientes comandos.
+
+    $ composer install
+    $ npm install
+
+nota: el primer comando instala las dependencias de php y el segundo las de sass y jquery para el front-end, para el ultimo comando visitar [ELIXIR](https://laravel.com/docs/5.1/elixir)
+
+6) listo a empezar a programar, me avisan cual quier cosa.
 
 ## Official Documentation
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Documentation for the framework can be found on the [Laravel website](https://laravel.com/docs/5.1).
 
 ## Contributing
 
