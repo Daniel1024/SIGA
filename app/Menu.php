@@ -19,4 +19,10 @@ class Menu extends Model
     {
         return $this->hasMany(Submenu::class);
     }
+
+    public static function padresportipousuario($id)
+    {
+        return Menu::where('tipo_usuario', $id)
+            ->get();
+    }
 }

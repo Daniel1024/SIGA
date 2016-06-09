@@ -17,7 +17,7 @@ class MenuTableSeeder extends Seeder
             'nombre'        => 'MENÚ PRINCIPAL',
             'icono'         => 'fa-envelope',
             'url'           => 'admin',
-            'usuario'       => 'daniel1024',
+            'usuario'       => 'admin',
         ]);
 
         SIGA\Menu::create([
@@ -26,7 +26,7 @@ class MenuTableSeeder extends Seeder
             'nombre'        => 'Menús',
             'icono'         => 'fa-bars',
             'url'           => 'menu',
-            'usuario'       => 'daniel1024',
+            'usuario'       => 'admin',
         ]);
 
         SIGA\Menu::create([
@@ -35,8 +35,68 @@ class MenuTableSeeder extends Seeder
             'nombre'        => 'Cerrar Sesión',
             'icono'         => 'fa-sign-out',
             'url'           => 'logout',
-            'usuario'       => 'daniel1024',
+            'usuario'       => 'admin',
         ]);
+
+        /*Menus docentes*/
+        SIGA\Menu::create([
+            'tipo_usuario'  => 'docente',
+            'orden'         => 1,
+            'nombre'        => 'MENÚ PRINCIPAL',
+            'icono'         => 'fa-envelope',
+            'url'           => 'docente',
+            'usuario'       => 'admin',
+        ]);
+
+        SIGA\Menu::create([
+            'tipo_usuario'  => 'docente',
+            'orden'         => 100,
+            'nombre'        => 'Cerrar Sesión',
+            'icono'         => 'fa-sign-out',
+            'url'           => 'logout',
+            'usuario'       => 'admin',
+        ]);
+        /*Menus docentes*/
+
+        /*Menus Alumnos*/
+        SIGA\Menu::create([
+            'tipo_usuario'  => 'alumno',
+            'orden'         => 1,
+            'nombre'        => 'MENÚ PRINCIPAL',
+            'icono'         => 'fa-envelope',
+            'url'           => 'alumno',
+            'usuario'       => 'admin',
+        ]);
+
+        SIGA\Menu::create([
+            'tipo_usuario'  => 'alumno',
+            'orden'         => 100,
+            'nombre'        => 'Cerrar Sesión',
+            'icono'         => 'fa-sign-out',
+            'url'           => 'logout',
+            'usuario'       => 'admin',
+        ]);
+        /*Menus Alumnos*/
+
+        /*Menus padres*/
+        SIGA\Menu::create([
+            'tipo_usuario'  => 'padres',
+            'orden'         => 1,
+            'nombre'        => 'MENÚ PRINCIPAL',
+            'icono'         => 'fa-envelope',
+            'url'           => 'padres',
+            'usuario'       => 'admin',
+        ]);
+
+        SIGA\Menu::create([
+            'tipo_usuario'  => 'padres',
+            'orden'         => 100,
+            'nombre'        => 'Cerrar Sesión',
+            'icono'         => 'fa-sign-out',
+            'url'           => 'logout',
+            'usuario'       => 'admin',
+        ]);
+        /*Menus padres*/
 
         SIGA\Submenu::create([
             'menu_id'   => 2,

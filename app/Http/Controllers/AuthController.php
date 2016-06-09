@@ -36,7 +36,7 @@ class AuthController extends Controller
         //
     }
 
-    private function _armar_li($url,$icono,$nombre,$id=0)
+    private function _armar_li($url, $icono, $nombre, $id)
     {
         if ($url==='menu') {
             $ruta = route($url, $id);
@@ -67,7 +67,7 @@ class AuthController extends Controller
                 ->get();
             if ($submenus->count() == 0) {
                 $text .= '<li>';
-                $text .= $this->_armar_li($menu->url, $menu->icono, $menu->nombre);
+                $text .= $this->_armar_li($menu->url, $menu->icono, $menu->nombre, $menu->id);
                 $text .= '</li>';
             } else {
                 $text .= '<li class="parent">';
@@ -75,7 +75,7 @@ class AuthController extends Controller
                 $text .= '<ul>';
                 foreach ($submenus as $submenu) {
                     $text .= '<li>';
-                    $text .= $this->_armar_li($submenu->url, $submenu->icono, $submenu->nombre);
+                    $text .= $this->_armar_li($submenu->url, $submenu->icono, $submenu->nombre, $menu->id);
                     $text .= '</li>';
                 }
                 $text .= '</ul>';
